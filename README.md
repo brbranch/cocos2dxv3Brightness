@@ -1,0 +1,2 @@
+# cocos2dxv3Brightness
+cocos2d-xのv3でスプライトの輝度を変えるサンプル
