@@ -1,6 +1,8 @@
 # cocos2dxv3Brightness
 cocos2d-xのv3でスプライトの輝度を変えるサンプル
 
+http://brbranch.jp/blog/201607/cocos2d-x/shader/
+
 shader/shaderactions内に以下のクラスがあります。
 
 ChangeColorBy.hpp
@@ -19,6 +21,10 @@ ChangeColorBy::create(【色タイプ】, 【色指定】, 【元に戻すかど
 以下のように使います。
 
 ```
+// create a sprite.
 auto sprite = Sprite::create("...");
-sprite->runAction(ChangeColorBy::create(ChangeColorType::HSV , Vec3(0.0, -1.0 , 1.0), true , 1.0 ));
+// change color to grayscale.
+sprite->runAction(ChangeColorBy::create(ChangeColorType::HSV , Vec3(0.0, -1.0 ,0.0), true , 1.0 ));
+// change brightness. 
+sprite->runAction(ChangeColorBy::create(ChangeColorType::HSV , Vec3(0.0, -1.0 ,1.0), true , 1.0 ));
 ```
